@@ -21,6 +21,7 @@ import os
 import sys
 import numpy as np
 from utils.clean_cn import clean_cn_corpus
+import jieba
 
 start_token = 'G'
 end_token = 'E'
@@ -39,7 +40,7 @@ def process_lyrics(file_name):
 
     all_words = []
     for lyric in lyrics:
-        all_words += [word for word in lyric]
+        all_words += jieba.lcut(lyric, cut_all=False)
 
     # calculate how many time appear per word
     counter = collections.Counter(all_words)

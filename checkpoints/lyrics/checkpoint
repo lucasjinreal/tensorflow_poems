@@ -1,2 +1,6 @@
-model_checkpoint_path: "/Volumes/Disk2/CodeSpace/AISpace/tfspace/chatbot_repos/tang_poetry/checkpoints/lyrics/lyrics-48"
-all_model_checkpoint_paths: "/Volumes/Disk2/CodeSpace/AISpace/tfspace/chatbot_repos/tang_poetry/checkpoints/lyrics/lyrics-48"
+model_checkpoint_path: "/Volumes/Disk2/CodeSpace/AISpace/tfspace/chatbot_repos/tang_poetry/checkpoints/lyrics/lyrics-96"
+all_model_checkpoint_paths: "/Volumes/Disk2/CodeSpace/AISpace/tfspace/chatbot_repos/tang_poetry/checkpoints/lyrics/lyrics-20"
+all_model_checkpoint_paths: "/Volumes/Disk2/CodeSpace/AISpace/tfspace/chatbot_repos/tang_poetry/checkpoints/lyrics/lyrics-40"
+all_model_checkpoint_paths: "/Volumes/Disk2/CodeSpace/AISpace/tfspace/chatbot_repos/tang_poetry/checkpoints/lyrics/lyrics-60"
+all_model_checkpoint_paths: "/Volumes/Disk2/CodeSpace/AISpace/tfspace/chatbot_repos/tang_poetry/checkpoints/lyrics/lyrics-80"
+all_model_checkpoint_paths: "/Volumes/Disk2/CodeSpace/AISpace/tfspace/chatbot_repos/tang_poetry/checkpoints/lyrics/lyrics-96"

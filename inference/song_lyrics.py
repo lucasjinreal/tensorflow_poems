@@ -34,7 +34,7 @@ tf.app.flags.DEFINE_string('file_path', os.path.abspath('./dataset/data/周杰�
 tf.app.flags.DEFINE_string('checkpoints_dir', os.path.abspath('./checkpoints/lyrics'), 'checkpoints save path.')
 tf.app.flags.DEFINE_string('model_prefix', 'lyrics', 'model save prefix.')
 
-tf.app.flags.DEFINE_integer('epochs', 50, 'train how many epochs.')
+tf.app.flags.DEFINE_integer('epochs', 500, 'train how many epochs.')
 
 FLAGS = tf.app.flags.FLAGS
 
@@ -83,7 +83,7 @@ def run_training():
                     ], feed_dict={input_data: batches_inputs[n], output_targets: batches_outputs[n]})
                     n += 1
                     print('[INFO] Epoch: %d , batch: %d , training loss: %.6f' % (epoch, batch, loss))
-                if epoch % 6 == 0:
+                if epoch % 20 == 0:
                     saver.save(sess, os.path.join(FLAGS.checkpoints_dir, FLAGS.model_prefix), global_step=epoch)
         except KeyboardInterrupt:
             print('[INFO] Interrupt manually, try saving checkpoint for now...')
@@ -140,9 +140,12 @@ def main(is_train):
         print('[INFO] train song lyric...')
         run_training()
     else:
-        print('[INFO] write song lyric...')
+        print('[INFO] compose song lyric...')
         lyric = gen_lyric()
-        print(lyric)
+        lyric_sentences = lyric.split(' ')
+        for l in lyric_sentences:
+            if 4 < len(l) < 20:
+                print(l)
 
 if __name__ == '__main__':
     tf.app.run()

@@ -126,7 +126,6 @@ def gen_poem():
         poem = ''
         while word != end_token:
             poem += word
-            print(poem)
             x = np.zeros((1, 1))
             x[0, 0] = word_int_map[word]
             [predict, last_state] = sess.run([end_points['prediction'], end_points['last_state']],
@@ -143,7 +142,11 @@ def main(is_train):
     else:
         print('[INFO] write tang poem...')
         poem = gen_poem()
-        print(poem)
+        poem_sentences = poem.split('。')
+        for s in poem_sentences:
+            if s != '' and len(s) > 10:
+                print(s + '。')
+
 
 
 if __name__ == '__main__':
