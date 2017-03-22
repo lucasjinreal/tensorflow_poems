@@ -1,4 +1,4 @@
-![PicName](http://ofwzcunzi.bkt.clouddn.com/Hwa2DLWOeQqASHdy.png)
+![PicName](http://ofwzcunzi.bkt.clouddn.com/c6NquwsEIMWg8xVm.png)
 
 # 2017-3-22 重磅更新，推出藏头诗功能
 一波小更新，下面的问题已经解决了：
@@ -24,7 +24,7 @@
 （浓浓的怀才不遇之风...）
 ```
 
-![PicName](http://ofwzcunzi.bkt.clouddn.com/OuzeLsXRfS9QkJSI.png)
+![PicName](http://ofwzcunzi.bkt.clouddn.com/VMBUVeqLjlXA6cUJ.png)
 
 
 
