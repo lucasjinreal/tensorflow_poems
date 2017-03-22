@@ -67,7 +67,7 @@
 我一推送更新你就能看到，主要是为了修复一些api问题，tensorflow虽然到了1.0，但是api还是会变化。
 把星星加起来，让更多人可以看到我们创造这个作诗机器人，后期会加入更多牛逼掉渣天的功能，比如说押韵等等。
 
-![机器人做的古诗](http://ofwzcunzi.bkt.clouddn.com/EZPgxTi5ZBrBXK8p.png)
+![PicName](http://ofwzcunzi.bkt.clouddn.com/m6fvfm6s0aZzVoni.png)
 
 # Install tensorflow_poems
 
