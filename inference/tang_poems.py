@@ -95,7 +95,7 @@ def run_training():
             print('[INFO] Last epoch were saved, next time will start from epoch {}.'.format(epoch))
 
 
-def to_word(predict, vocabs):
+def to_word(predictions, vocabs):
     threshold = np.random.rand(1)*max(predictions[0])#Generate random probility threshole between 0 and max probility 
     index = next(i for i,v in enumerate(predictions[0]) if v > threshold)#Find the first letter that have probility above threshold
     #Suggestion, if you don't want same letter as previouse letter, add addtional check here
