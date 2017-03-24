@@ -3,6 +3,7 @@
   <component name="ProjectModuleManager">
     <modules>
       <module fileurl="file://$PROJECT_DIR$/.idea/tang_poetry.iml" filepath="$PROJECT_DIR$/.idea/tang_poetry.iml" />
+      <module fileurl="file://$PROJECT_DIR$/.idea/tf_tang_poems.iml" filepath="$PROJECT_DIR$/.idea/tf_tang_poems.iml" />
     </modules>
   </component>
 </project>
