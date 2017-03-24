@@ -1,4 +1,7 @@
-# -*- coding: utf-8 -*-
+    threshold = np.random.rand(1)*max(predictions[0])#Generate random probility threshole
+
+        sample = next(i for i,v in enumerate(predictions[0]) if v > threshold)#Find the first letter that have probility above threshold
+        #Suggestion, if you don't want same letter as previouse letter, add addtional check here# -*- coding: utf-8 -*-
 # file: tang_poems.py
 # author: JinTian
 # time: 08/03/2017 7:45 PM
@@ -93,12 +96,10 @@ def run_training():
 
 
 def to_word(predict, vocabs):
-    t = np.cumsum(predict)
-    s = np.sum(predict)
-    sample = int(np.searchsorted(t, np.random.rand(1) * s))
-    if sample > len(vocabs):
-        sample = len(vocabs) - 1
-    return vocabs[sample]
+    threshold = np.random.rand(1)*max(predictions[0])#Generate random probility threshole between 0 and max probility 
+    index = next(i for i,v in enumerate(predictions[0]) if v > threshold)#Find the first letter that have probility above threshold
+    #Suggestion, if you don't want same letter as previouse letter, add addtional check here
+    return vocabs[index]
 
 
 def gen_poem(begin_word):
