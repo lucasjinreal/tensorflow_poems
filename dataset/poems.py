@@ -43,7 +43,7 @@ def process_poems(file_name):
             except ValueError as e:
                 pass
     # 按诗的字数排序
-    poems = sorted(poems, key=lambda l: len(line))
+    poems = sorted(poems, key=lambda l: len(l))
 
     # 统计每个字出现次数
     all_words = []
