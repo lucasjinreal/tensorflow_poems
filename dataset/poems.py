@@ -28,35 +28,30 @@ end_token = 'E'
 def process_poems(file_name):
     # 诗集
     poems = []
-    with open(file_name, "r", encoding='utf-8', ) as f:  # with open方法省去了打开文件的try catch过程，也不用f.close
+    with open(file_name, "r", encoding='utf-8', ) as f:
         for line in f.readlines():
             try:
-                title, content = line.strip().split(':')  # 分割古诗title和content
-                content = content.replace(' ', '')  # 去掉空格
-                # 如果 content 包含了特殊字符'_','(','（','《','[','G','E' 则不处理
+                title, content = line.strip().split(':')
+                content = content.replace(' ', '')
                 if '_' in content or '(' in content or '（' in content or '《' in content or '[' in content or \
                         start_token in content or end_token in content:
                     continue
-                if len(content) < 5 or len(content) > 79:  # 不懂这两个magic number在考虑什么情况，但utf-8中文len=3
+                if len(content) < 5 or len(content) > 79:
                     continue
-                content = start_token + content + end_token  # 给内容加上标记
-                poems.append(content)  # 保存到list
+                content = start_token + content + end_token
+                poems.append(content)
             except ValueError as e:
                 pass
     # 按诗的字数排序
-    poems = sorted(poems, key=lambda l: len(l))
+    poems = sorted(poems, key=lambda l: len(line))
 
     # 统计每个字出现次数
     all_words = []
     for poem in poems:
-        # 建议把'G''E'去掉
-        poem = poem.strip('GE')
-        poem = poem.replace('，', '')
-        poem = poem.replace('。', '')
-        all_words += [word for word in poem]  # (word for word in poem) 也可
+        all_words += [word for word in poem]
     # 这里根据包含了每个字对应的频率
-    counter = collections.Counter(all_words)  # 返回得到的是 Counter({'花': 6, '梦': 5, '春': 5, '归': 4}) 的 KV对
-    count_pairs = sorted(counter.items(), key=lambda x: -x[1])  # lambda x, x对应一个 KV,选择 x[1]就是用value排序,负数是倒序
+    counter = collections.Counter(all_words)
+    count_pairs = sorted(counter.items(), key=lambda x: -x[1])
     words, _ = zip(*count_pairs)
 
     # 取前多少个常用字
