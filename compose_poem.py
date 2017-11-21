@@ -26,6 +26,8 @@ end_token = 'E'
 model_dir = './model/'
 corpus_file = './data/poems.txt'
 
+lr = 0.0002
+
 
 def to_word(predict, vocabs):
     t = np.cumsum(predict)
@@ -39,12 +41,12 @@ def to_word(predict, vocabs):
 def gen_poem(begin_word):
     batch_size = 1
     print('## loading corpus from %s' % model_dir)
-    poems_vector, word_int_map, vocabularies = process_poems(corpus_fileh)
+    poems_vector, word_int_map, vocabularies = process_poems(corpus_file)
 
     input_data = tf.placeholder(tf.int32, [batch_size, None])
 
     end_points = rnn_model(model='lstm', input_data=input_data, output_data=None, vocab_size=len(
-        vocabularies), rnn_size=128, num_layers=2, batch_size=64, learning_rate=FLAGS.learning_rate)
+        vocabularies), rnn_size=128, num_layers=2, batch_size=64, learning_rate=lr)
 
     saver = tf.train.Saver(tf.global_variables())
     init_op = tf.group(tf.global_variables_initializer(), tf.local_variables_initializer())
