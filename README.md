@@ -14,7 +14,26 @@ python3 train.py
 python3 compose_poem.py
 ```
 
+When you kick it off, you will see something like this:
 
+![](https://i.loli.net/2018/03/12/5aa5fd903c041.jpeg)
+
+
+
+## 2018-3-12
+
+**tensorflow_poems**来诈尸了，许久没有更新这个项目，不知不觉已经有了上千个star，感觉大家对这个还是很感兴趣，在这里我非常荣幸大家关注这个项目，但是我们不能因此而停止不前，这也是我来诈尸的目的。我会向大家展示一下我最新的进展，首先非常希望大家关注一下我倾心做的知乎专栏，人工智能从入门到逆天杀神以及每周一个黑科技，我们不仅仅要关注人工智能，还有区块链等前沿技术：
+
+- 人工智能从入门到逆天杀神(知乎专栏)： https://zhuanlan.zhihu.com/ai-man
+- 每周一项目黑科技-TrackTech(知乎专栏):  https://zhuanlan.zhihu.com/tracktech
+
+最后我的最新文章都会发布在我的博客 https://jinfagang.github.io 上，欢迎大家关注，可以通过里面的chat功能找我交流。最后，我们还建立了一个微信群人工智能交流组织，讨论前沿的AI技术，不管是自然语言处理还是计算机视觉都可以加入，由于人数超过了100人，大家可以通过添加我的微信 `jintianiloveu` 找我拉入群聊。
+
+除了这个项目以外，我也向大家推荐我做的其他几个开源项目：
+
+- [alfred](https://github.com/jinfagang/alfred.git): 集成了许多深度学习脚本的工具，通过 `pip install alfred-py` 你就拥有了一个集合视觉，nlp，甚至爬虫的工具集合。
+
+最后无耻的打个广告，**萝莉萝莉**是我做的一个业余项目，主打的是白领社交平台，网址 www.www.luoli-luoli.com 不管是Android开发还是iOS，还是前端，都期待你们加入一起。可以添加我微信与我交流哦。
 
 ## 2017-11-8
 
