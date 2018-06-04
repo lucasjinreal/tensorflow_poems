@@ -30,12 +30,13 @@ lr = 0.0002
 
 
 def to_word(predict, vocabs):
-    t = np.cumsum(predict)
-    s = np.sum(predict)
-    sample = int(np.searchsorted(t, np.random.rand(1) * s))
+    predict = predict[0]       
+    predict /= np.sum(predict)
+    sample = np.random.choice(np.arange(len(predict)), p=predict)
     if sample > len(vocabs):
-        sample = len(vocabs) - 1
-    return vocabs[sample]
+        return vocabs[-1]
+    else:
+        return vocabs[sample]
 
 
 def gen_poem(begin_word):
