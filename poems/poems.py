@@ -26,7 +26,7 @@ end_token = 'E'
 
 
 def process_poems(file_name):
-    # 诗集
+    # poems -> list of numbers
     poems = []
     with open(file_name, "r", encoding='utf-8', ) as f:
         for line in f.readlines():
@@ -42,16 +42,14 @@ def process_poems(file_name):
                 poems.append(content)
             except ValueError as e:
                 pass
-    poems = sorted(poems, key=lambda l: len(line))
+    # poems = sorted(poems, key=len)
 
-    all_words = []
-    for poem in poems:
-        all_words += [word for word in poem]
+    all_words = [word for poem in poems for word in poem]
     counter = collections.Counter(all_words)
-    count_pairs = sorted(counter.items(), key=lambda x: -x[1])
+    count_pairs = sorted(counter.items(), key=lambda x: x[1], reverse=True)
     words, _ = zip(*count_pairs)
 
-    words = words[:len(words)] + (' ',)
+    words = words + (' ',)
     word_int_map = dict(zip(words, range(len(words))))
     poems_vector = [list(map(lambda word: word_int_map.get(word, len(words)), poem)) for poem in poems]
 
@@ -69,8 +67,8 @@ def generate_batch(batch_size, poems_vec, word_to_int):
         batches = poems_vec[start_index:end_index]
         length = max(map(len, batches))
         x_data = np.full((batch_size, length), word_to_int[' '], np.int32)
-        for row in range(batch_size):
-            x_data[row, :len(batches[row])] = batches[row]
+        for row, batch in enumerate(batches):
+            x_data[row, :len(batch)] = batch
         y_data = np.copy(x_data)
         y_data[:, :-1] = x_data[:, 1:]
         """
