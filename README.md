@@ -10,7 +10,7 @@
 #### 2018-8-16
 
 We are now officially announced a new project started: **StrangeAI School** - A artificial intelligence learning school and advanced algorithm exchange platform! What we believed in is: AI should made to change people's life, rather than controlled by Gaint Companies.
-Here you can get some previews about our projects: ai.loliloli.pro
+Here you can get some previews about our projects: http://ai.loliloli.pro (strangeai.pro availiable soon)
 
 #### 2018-3-12
 
@@ -18,7 +18,8 @@ Here you can get some previews about our projects: ai.loliloli.pro
 
 - 人工智能从入门到逆天杀神(知乎专栏)： https://zhuanlan.zhihu.com/ai-man
 - 每周一项目黑科技-TrackTech(知乎专栏):  https://zhuanlan.zhihu.com/tracktech
-If you want talk about AI, visit our website (for now): ai.loliloli.pro , **subscribe** our WeChat channel: 奇异人工智能
+If you want talk about AI, visit our website (for now):  http://ai.loliloli.pro (strangeai.pro availiable soon)
+ , **subscribe** our WeChat channel: 奇异人工智能
 
 #### 2017-11-8
 
