@@ -1,41 +1,23 @@
-# LiBai
+# LiBai AI Composer
 
-> keep updating on this AI poem composer, now we are able to generate poems on Chinese. I picked it up and keep on make this better.
+> An ai powered automatically generats poems in Chinese.
 
-## Quick Start
+## Updates
 
-using **LiBai** is very simple:
+#### 2018-8-16
 
-```
-git clone https://github.com/jinfagang/tensorflow_poems
-# train on poems
-python3 train.py
-# compose poems
-python3 compose_poem.py
-```
+We are now officially announced a new project started: **StrangeAI School** - A artificial intelligence learning school and advanced algorithm exchange platform! What we believed in is: AI should made to change people's life, rather than controlled by Gaint Companies.
+Here you can get some previews about our projects: ai.loliloli.pro
 
-When you kick it off, you will see something like this:
-
-![](https://i.loli.net/2018/03/12/5aa5fd903c041.jpeg)
-
-
-
-## 2018-3-12
+#### 2018-3-12
 
 **tensorflow_poems**来诈尸了，许久没有更新这个项目，不知不觉已经有了上千个star，感觉大家对这个还是很感兴趣，在这里我非常荣幸大家关注这个项目，但是我们不能因此而停止不前，这也是我来诈尸的目的。我会向大家展示一下我最新的进展，首先非常希望大家关注一下我倾心做的知乎专栏，人工智能从入门到逆天杀神以及每周一个黑科技，我们不仅仅要关注人工智能，还有区块链等前沿技术：
 
 - 人工智能从入门到逆天杀神(知乎专栏)： https://zhuanlan.zhihu.com/ai-man
 - 每周一项目黑科技-TrackTech(知乎专栏):  https://zhuanlan.zhihu.com/tracktech
+If you want talk about AI, visit our website (for now): ai.loliloli.pro , **subscribe** our WeChat channel: 奇异人工智能
 
-最后我的最新文章都会发布在我的博客 https://jinfagang.github.io 上，欢迎大家关注，可以通过里面的chat功能找我交流。最后，我们还建立了一个微信群人工智能交流组织，讨论前沿的AI技术，不管是自然语言处理还是计算机视觉都可以加入，由于人数超过了100人，大家可以通过添加我的微信 `jintianiloveu` 找我拉入群聊。
-
-除了这个项目以外，我也向大家推荐我做的其他几个开源项目：
-
-- [alfred](https://github.com/jinfagang/alfred.git): 集成了许多深度学习脚本的工具，通过 `pip install alfred-py` 你就拥有了一个集合视觉，nlp，甚至爬虫的工具集合。
-
-最后无耻的打个广告，**萝莉萝莉**是我做的一个业余项目，主打的是白领社交平台，网址 www.www.luoli-luoli.com 不管是Android开发还是iOS，还是前端，都期待你们加入一起。可以添加我微信与我交流哦。
-
-## 2017-11-8
+#### 2017-11-8
 
 貌似距离上一次更新这个repo已经很久了，这段时间很多童鞋通过微信找到了我，甚至包括一些大佬。当时这个项目只是一个练手的东西，那个时候我的手法还不是非常老道。让各位踩坑了。现在**李白**强势归来。在这次的更新中增加了这些改进：
 
@@ -43,7 +25,7 @@ When you kick it off, you will see something like this:
 - 训练只需要运行train.py，数据和预训练模型都已经备好
 - 可以直接compose_poem.py 作诗，这次不会出现死循环的情况了。
 
-## 2017-6-1 ~~可能是最后一次更新~~
+#### 2017-6-1 ~~可能是最后一次更新~~
 
 我决定有时间的时候重构这个项目了，古诗，源自在下骨子里的文艺之风，最近搞得东西有点乱，所以召集大家，对这个项目感兴趣的欢迎加入扣扣群：
 ```
@@ -51,7 +33,7 @@ When you kick it off, you will see something like this:
 ```
 
 
-## 2017-3-22 重磅更新，推出藏头诗功能
+#### 2017-3-22 重磅更新，推出藏头诗功能
 
 一波小更新，下面的问题已经解决了：
 * 训练完成作诗时出现一直不出现的情况，实际上是陷入了一直作诗的死循环，已修复
@@ -77,6 +59,27 @@ When you kick it off, you will see something like this:
 ```
 
 ![PicName](http://ofwzcunzi.bkt.clouddn.com/VMBUVeqLjlXA6cUJ.png)
+
+
+## Quick Start
+
+using **LiBai** is very simple:
+
+```
+git clone https://github.com/jinfagang/tensorflow_poems
+# train on poems
+python3 train.py
+# compose poems
+python3 compose_poem.py
+```
+
+When you kick it off, you will see something like this:
+
+![](https://i.loli.net/2018/03/12/5aa5fd903c041.jpeg)
+
+
+
+
 
 ## 它已经不仅仅能够作古诗，还能模仿周杰伦创作歌词！！
 
