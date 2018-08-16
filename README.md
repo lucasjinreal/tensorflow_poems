@@ -2,7 +2,10 @@
 
 > An ai powered automatically generats poems in Chinese.
 
-## Updates
+很久以来，我们都想让机器自己创作诗歌，当无数作家、编辑还没有抬起笔时，AI已经完成了数千篇文章。现在，这里是第一步....
+
+
+# Updates
 
 #### 2018-8-16
 
@@ -61,7 +64,7 @@ If you want talk about AI, visit our website (for now): ai.loliloli.pro , **subs
 ![PicName](http://ofwzcunzi.bkt.clouddn.com/VMBUVeqLjlXA6cUJ.png)
 
 
-## Quick Start
+# Quick Start
 
 using **LiBai** is very simple:
 
@@ -81,7 +84,7 @@ When you kick it off, you will see something like this:
 
 
 
-## 它已经不仅仅能够作古诗，还能模仿周杰伦创作歌词！！
+# 它已经不仅仅能够作古诗，还能模仿周杰伦创作歌词！！
 
 这是2017-03-9更新的功能，模仿周杰伦歌曲创作歌词，大家先来感受一下它创作的歌词：
 
@@ -102,7 +105,7 @@ When you kick it off, you will see something like this:
 [jinfagang19@163.com](http://mail.163.com/)
 相信如果不断的加入训练文本我们的歌词创作机器人会越来越牛逼！当然我会及时把数据集更新到github上，大家可以star一下跟进本项目的更新。
 
-## 阅遍了近4万首唐诗
+# 阅遍了近4万首唐诗
 
 
 
@@ -123,7 +126,7 @@ When you kick it off, you will see something like this:
 
 ![PicName](http://ofwzcunzi.bkt.clouddn.com/m6fvfm6s0aZzVoni.png)
 
-## Copyright
+# Copyright
 
 This repo implement by Jin Fagang. Using this under Apache License.
 
