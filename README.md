@@ -19,7 +19,7 @@ Here you can get some previews about our projects: http://ai.loliloli.pro (stran
 - 人工智能从入门到逆天杀神(知乎专栏)： https://zhuanlan.zhihu.com/ai-man
 - 每周一项目黑科技-TrackTech(知乎专栏):  https://zhuanlan.zhihu.com/tracktech
 If you want talk about AI, visit our website (for now):  http://ai.loliloli.pro (strangeai.pro availiable soon)
- , **subscribe** our WeChat channel: 奇异人工智能
+ , **subscribe** our WeChat channel: 奇异人工智能学院
 
 #### 2017-11-8
 
