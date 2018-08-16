@@ -9,7 +9,7 @@
 
 #### 2018-8-16
 
-We are now officially announced a new project started: **StrangeAI School** - A artificial intelligence learning school and advanced algorithm exchange platform! What we believed in is: AI should made to change people's life, rather than controlled by Gaint Companies.
+We are now officially announced a new project started: **StrangeAI School** - An artificial intelligence learning school and advanced algorithm exchange platform! What we believed in is: AI should made to change people's life, rather than controlled by Gaint Companies.
 Here you can get some previews about our projects: http://ai.loliloli.pro (strangeai.pro availiable soon)
 
 #### 2018-3-12
