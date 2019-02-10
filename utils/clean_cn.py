@@ -99,17 +99,17 @@ def should_reserve(w, clean_level):
 
 def is_chinese(uchar):
     """is chinese"""
-    return u'\u4e00' <= uchar <= u'\u9fa5'
+    return '\u4e00' <= uchar <= '\u9fa5'
 
 
 def is_number(uchar):
     """is number"""
-    return u'\u0030' <= uchar <= u'\u0039'
+    return '\u0030' <= uchar <= '\u0039'
 
 
 def is_alphabet(uchar):
     """is alphabet"""
-    return (u'\u0041' <= uchar <= u'\u005a') or (u'\u0061' <= uchar <= u'\u007a')
+    return ('\u0041' <= uchar <= '\u005a') or ('\u0061' <= uchar <= '\u007a')
 
 def semi_angle_to_sbc(uchar):
     """半角转全角"""
