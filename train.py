@@ -17,7 +17,6 @@
 # limitations under the License.
 # ------------------------------------------------------------------------
 import os
-import numpy as np
 import tensorflow as tf
 from poems.model import rnn_model
 from poems.poems import process_poems, generate_batch
@@ -60,9 +59,9 @@ def run_training():
             start_epoch += int(checkpoint.split('-')[-1])
         print('## start training...')
         try:
+            n_chunk = len(poems_vector) // FLAGS.batch_size
             for epoch in range(start_epoch, FLAGS.epochs):
                 n = 0
-                n_chunk = len(poems_vector) // FLAGS.batch_size
                 for batch in range(n_chunk):
                     loss, _, _ = sess.run([
                         end_points['total_loss'],
