@@ -17,8 +17,6 @@
 # limitations under the License.
 # ------------------------------------------------------------------------
 import collections
-import os
-import sys
 import numpy as np
 
 start_token = 'B'
@@ -46,12 +44,12 @@ def process_poems(file_name):
 
     all_words = [word for poem in poems for word in poem]
     counter = collections.Counter(all_words)
-    count_pairs = sorted(counter.items(), key=lambda x: x[1], reverse=True)
-    words, _ = zip(*count_pairs)
+    words = sorted(counter.keys(), key=lambda x: counter[x], reverse=True)
 
-    words = words + (' ',)
-    word_int_map = dict(zip(words, range(len(words))))
-    poems_vector = [list(map(lambda word: word_int_map.get(word, len(words)), poem)) for poem in poems]
+    words.append(' ')
+    L = len(words)
+    word_int_map = dict(zip(words, range(L)))
+    poems_vector = [list(map(lambda word: word_int_map.get(word, L), poem)) for poem in poems]
 
     return poems_vector, word_int_map, words
 

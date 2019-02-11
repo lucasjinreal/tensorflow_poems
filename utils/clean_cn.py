@@ -26,7 +26,7 @@ level='clean', this will remove all except Chinese and Chinese punctuations
 besides, if you want remove complex Chinese characters, just set this to be true:
 simple_only=True
 """
-import numpy as np
+
 import os
 import string
 
@@ -54,17 +54,11 @@ def clean_cn_corpus(file_name, clean_level='all', simple_only=True, is_save=True
         clean_content = []
         for l in f.readlines():
             l = l.strip()
-            if l == '':
-                pass
-            else:
+            if l:
                 l = list(l)
-                should_remove_words = []
-                for w in l:
-                    if not should_reserve(w, clean_level):
-                        should_remove_words.append(w)
-                clean_line = [c for c in l if c not in should_remove_words]
-                clean_line = ''.join(clean_line)
-                if clean_line != '':
+                should_remove_words = [w for w in l if not should_reserve(w, clean_level)]
+                clean_line = ''.join(c for c in l if c not in should_remove_words)
+                if clean_line:
                     clean_content.append(clean_line)
     if is_save:
         with open(save_file, 'w+') as f:
@@ -105,27 +99,17 @@ def should_reserve(w, clean_level):
 
 def is_chinese(uchar):
     """is chinese"""
-    if u'\u4e00' <= uchar <= u'\u9fa5':
-        return True
-    else:
-        return False
+    return '\u4e00' <= uchar <= '\u9fa5'
 
 
 def is_number(uchar):
     """is number"""
-    if u'\u0030' <= uchar <= u'\u0039':
-        return True
-    else:
-        return False
+    return '\u0030' <= uchar <= '\u0039'
 
 
 def is_alphabet(uchar):
     """is alphabet"""
-    if (u'\u0041' <= uchar <= u'\u005a') or (u'\u0061' <= uchar <= u'\u007a'):
-        return True
-    else:
-        return False
-
+    return ('\u0041' <= uchar <= '\u005a') or ('\u0061' <= uchar <= '\u007a')
 
 def semi_angle_to_sbc(uchar):
     """半角转全角"""

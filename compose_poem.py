@@ -61,20 +61,16 @@ def gen_poem(begin_word):
 
         [predict, last_state] = sess.run([end_points['prediction'], end_points['last_state']],
                                          feed_dict={input_data: x})
-        if begin_word:
-            word = begin_word
-        else:
-            word = to_word(predict, vocabularies)
+        word = begin_word or to_word(predict, vocabularies)
         poem_ = ''
 
         i = 0
         while word != end_token:
             poem_ += word
             i += 1
-            if i >= 24:
+            if i > 24:
                 break
-            x = np.zeros((1, 1))
-            x[0, 0] = word_int_map[word]
+            x = np.array([[word_int_map[word]]])
             [predict, last_state] = sess.run([end_points['prediction'], end_points['last_state']],
                                              feed_dict={input_data: x, end_points['initial_state']: last_state})
             word = to_word(predict, vocabularies)
