@@ -1,11 +1,58 @@
-# LiBai AI Composer
+<h1 align="center">Welcome to LiBai AI Composer 👋</h1>
+<p>
+  <img alt="Version" src="https://img.shields.io/badge/version-under-blue.svg?cacheSeconds=2592000" />
+  <a href="https://github.com/jinfagang/tensorflow_poems/#Copyright" target="_blank">
+    <img alt="License: Apache" src="https://img.shields.io/badge/License-Apache-yellow.svg" />
+  </a>
+</p>
 
 > An ai powered automatically generats poems in Chinese.
+>
+> 很久以来，我们都想让机器自己创作诗歌，当无数作家、编辑还没有抬起笔时，AI已经完成了数千篇文章。现在，这里是第一步....
 
-很久以来，我们都想让机器自己创作诗歌，当无数作家、编辑还没有抬起笔时，AI已经完成了数千篇文章。现在，这里是第一步....
+### 🏠 [Homepage](https://github.com/jinfagang/tensorflow_poems)
 
+## 👍 Outcome 结果
 
-# Updates
+阅遍了近4万首唐诗，作出：
+
+```
+龙舆迎池里，控列守龙猱。
+几岁芳篁落，来和晚月中。
+殊乘暮心处，麦光属激羁。
+铁门通眼峡，高桂露沙连。
+倘子门中望，何妨嶮锦楼。
+择闻洛臣识，椒苑根觞吼。
+柳翰天河酒，光方入胶明。
+```
+
+这诗做的很有感觉啊，这都是勤奋的结果啊，基本上学习了全唐诗的所有精华才有了这么牛逼的能力，这一般人能做到？
+本博客讲讲解一些里面实现的技术细节，如果有未尽之处，大家可以通过微信找到我，那个头像很神奇的男人。闲话不多说，先把 github 链接放上来，这个作诗机器人我会一直维护，如果大家因为时间太紧没有时间看，可以给这个项目 star 一下或者 fork，
+我一推送更新你就能看到，主要是为了修复一些 api 问题，tensorflow 虽然到了1.0，但是 api 还是会变化。
+把星星加起来，让更多人可以看到我们创造这个作诗机器人，后期会加入更多牛逼掉渣天的功能，比如说押韵等等。
+
+## 📥 Install 安装
+
+```sh
+git clone https://github.com/jinfagang/tensorflow_poems.git
+```
+
+## 🛠 Usage 使用
+
+```sh
+# train on poems 训练
+python3 train.py
+# compose poems 作诗
+python3 compose_poem.py
+```
+
+训练的时候，你可能会看到如下：
+
+When you kick it off, you will see something like this:
+
+![](https://i.loli.net/2018/03/12/5aa5fd903c041.jpeg)
+
+## 📈 Updates 更新
 
 #### 2018-8-16
 
@@ -18,8 +65,8 @@ Here you can get some previews about our projects: http://ai.loliloli.pro (stran
 
 - 人工智能从入门到逆天杀神(知乎专栏)： https://zhuanlan.zhihu.com/ai-man
 - 每周一项目黑科技-TrackTech(知乎专栏):  https://zhuanlan.zhihu.com/tracktech
-If you want talk about AI, visit our website (for now):  http://ai.loliloli.pro (strangeai.pro availiable soon)
- , **subscribe** our WeChat channel: 奇异人工智能学院
+    If you want talk about AI, visit our website (for now):  http://ai.loliloli.pro (strangeai.pro availiable soon)
+     , **subscribe** our WeChat channel: 奇异人工智能学院
 
 #### 2017-11-8
 
@@ -32,6 +79,7 @@ If you want talk about AI, visit our website (for now):  http://ai.loliloli.pro 
 #### 2017-6-1 ~~可能是最后一次更新~~
 
 我决定有时间的时候重构这个项目了，古诗，源自在下骨子里的文艺之风，最近搞得东西有点乱，所以召集大家，对这个项目感兴趣的欢迎加入扣扣群：
+
 ```
  292889553
 ```
@@ -40,12 +88,13 @@ If you want talk about AI, visit our website (for now):  http://ai.loliloli.pro 
 #### 2017-3-22 重磅更新，推出藏头诗功能
 
 一波小更新，下面的问题已经解决了：
+
 * 训练完成作诗时出现一直不出现的情况，实际上是陷入了一直作诗的死循环，已修复
 * 新增pretty print功能，打印出的古诗标准，接入第三方APP或者其他平台可以直接获取到标准格式的诗词
 * Ternimal disable了tensorflow默认的debug信息
-  最后最后最重要的是： **我们的作诗机器人（暂且叫李白）已经可以根据你的指定的字作诗了哦！！**
-  欢迎大家继续来踩，没有star的快star！！保持更新！！永远开源！！！
-  让我们来看看李白做的藏头诗吧：
+    最后最后最重要的是： **我们的作诗机器人（暂且叫李白）已经可以根据你的指定的字作诗了哦！！**
+    欢迎大家继续来踩，没有star的快star！！保持更新！！永远开源！！！
+    让我们来看看李白做的藏头诗吧：
 
 ```
 # 最近一直下雨，就作一首雨字开头的吧
@@ -62,30 +111,7 @@ If you want talk about AI, visit our website (for now):  http://ai.loliloli.pro 
 （浓浓的怀才不遇之风...）
 ```
 
-![PicName](http://ofwzcunzi.bkt.clouddn.com/VMBUVeqLjlXA6cUJ.png)
-
-
-# Quick Start
-
-using **LiBai** is very simple:
-
-```
-git clone https://github.com/jinfagang/tensorflow_poems
-# train on poems
-python3 train.py
-# compose poems
-python3 compose_poem.py
-```
-
-When you kick it off, you will see something like this:
-
-![](https://i.loli.net/2018/03/12/5aa5fd903c041.jpeg)
-
-
-
-
-
-# 它已经不仅仅能够作古诗，还能模仿周杰伦创作歌词！！
+## 👊 它已经不仅仅能够作古诗，还能模仿周杰伦创作歌词！！
 
 这是2017-03-9更新的功能，模仿周杰伦歌曲创作歌词，大家先来感受一下它创作的歌词：
 
@@ -102,46 +128,38 @@ When you kick it off, you will see something like this:
 
 怎么说，目前由于缺乏训练文本，导致我们的AI做的歌词有点....额，还好啦，有那么一点忧郁之风，这个周杰伦完全不是一种风格呀。
 然而没有关系，目前它训练的文本还太少，只有112首歌，在这里我来呼吁大家一起来整理 **中国歌手的语料文本！！！**
-如果你喜欢周杰伦的歌，可以把他的歌一首一行，每首歌句子空格分开保存到txt中，大家可以集中发到我的邮箱：
-[jinfagang19@163.com](http://mail.163.com/)
-相信如果不断的加入训练文本我们的歌词创作机器人会越来越牛逼！当然我会及时把数据集更新到github上，大家可以star一下跟进本项目的更新。
+如果你喜欢周杰伦的歌，可以把他的歌一首一行，每首歌句子空格分开保存到txt中，大家可以集中发到我的[邮箱](mailto:jinfagang19@163.com)：
+相信如果不断的加入训练文本我们的歌词创作机器人会越来越牛逼！当然我会及时把数据集更新到github上，大家可以 star 一下跟进本项目的更新。
 
-# 阅遍了近4万首唐诗
+## 👥 Authors 作者
 
+👤 **jinfagang**
 
+* Website: http://jinfagang.github.io
+* GitHub: [@JinTian](https://github.com/JinTian)
 
-```
-龙舆迎池里，控列守龙猱。
-几岁芳篁落，来和晚月中。
-殊乘暮心处，麦光属激羁。
-铁门通眼峡，高桂露沙连。
-倘子门中望，何妨嶮锦楼。
-择闻洛臣识，椒苑根觞吼。
-柳翰天河酒，光方入胶明。
-```
+👤 **William Song**
 
-这诗做的很有感觉啊，这都是勤奋的结果啊，基本上学习了全唐诗的所有精华才有了这么牛逼的能力，这一般人能做到？
-本博客讲讲解一些里面实现的技术细节，如果有未尽之处，大家可以通过微信找到我，那个头像很神奇的男人。闲话不多说，先把github链接放上来，这个作诗机器人我会一直维护，如果大家因为时间太紧没有时间看，可以给这个项目star一下或者fork，
-我一推送更新你就能看到，主要是为了修复一些api问题，tensorflow虽然到了1.0，但是api还是会变化。
-把星星加起来，让更多人可以看到我们创造这个作诗机器人，后期会加入更多牛逼掉渣天的功能，比如说押韵等等。
+- Website: http://williamzjc.gitee.io/morninglake/
+- GitHub: [@Freakwill](https://github.com/Freakwill)
+- Twitter: [@WilliamPython](https://twitter.com/WilliamPython)
 
-![PicName](http://ofwzcunzi.bkt.clouddn.com/m6fvfm6s0aZzVoni.png)
+👤 **Harvey Dam**
 
-# Copyright
+- GitHub: [@damtharvey](https://github.com/damtharvey)
 
-This repo implement by Jin Fagang. Using this under Apache License.
+👤 **KnowsCount**
 
-```
-# Licensed under the Apache License, Version 2.0 (the "License");
-# you may not use this file except in compliance with the License.
-# You may obtain a copy of the License at
-#
-#     http://www.apache.org/licenses/LICENSE-2.0
-#
-# Unless required by applicable law or agreed to in writing, software
-# distributed under the License is distributed on an "AS IS" BASIS,
-# WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
-# See the License for the specific language governing permissions and
-# limitations under the License.
-```
+- Website: http://docs.knowscount.cc/
+- GitHub: [@KnowsCount](https://github.com/KnowsCount)
 
+## 🎉 Show your support 支持
+
+如果帮助了你，给颗 🌟 罢！
+
+Give a 🌟 if this project helped you!
+
+## 📝 License 协议
+
+Copyright 版权 © 2020 [jinfagang](https://github.com/JinTian).<br />
+This project is [Apache](https://github.com/jinfagang/tensorflow_poems/#Copyright) licensed. 协议。

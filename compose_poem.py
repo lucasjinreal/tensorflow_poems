@@ -85,6 +85,8 @@ def pretty_print_poem(poem_):
             print(s + '。')
 
 if __name__ == '__main__':
-    begin_char = input('## please input the first character:')
+    begin_char = input('## （输入 quit 退出）请输入第一个字 please input the first character: ')
+    if begin_char == 'quit':
+        exit() 
     poem = gen_poem(begin_char)
     pretty_print_poem(poem_=poem)
