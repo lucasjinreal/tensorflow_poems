@@ -161,5 +161,4 @@ Give a 🌟 if this project helped you!
 
 ## 📝 License 协议
 
-Copyright 版权 © 2020 [jinfagang](https://github.com/JinTian).<br />
-This project is [Apache](https://github.com/jinfagang/tensorflow_poems/#Copyright) licensed. 协议。
+Copyright 版权 © 2020 
