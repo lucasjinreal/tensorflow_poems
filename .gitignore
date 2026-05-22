@@ -2,3 +2,4 @@ checkpoints/
 model/
 .idea/
 __pycache__/
+.claude/
