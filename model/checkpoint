@@ -1,3 +1,2 @@
-model_checkpoint_path: "/Users/admin/Desktop/tensorflow_poems/model/poems-1"
-all_model_checkpoint_paths: "/Users/admin/Desktop/tensorflow_poems/model/poems-0"
-all_model_checkpoint_paths: "/Users/admin/Desktop/tensorflow_poems/model/poems-1"
+model_checkpoint_path: "poems-1"
+all_model_checkpoint_paths: "poems-1"

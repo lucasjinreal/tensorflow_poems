@@ -16,7 +16,8 @@
 # See the License for the specific language governing permissions and
 # limitations under the License.
 # ------------------------------------------------------------------------
-import tensorflow as tf
+import tensorflow.compat.v1 as tf
+tf.disable_v2_behavior()
 from poems.model import rnn_model
 from poems.poems import process_poems
 import numpy as np
@@ -33,7 +34,7 @@ def to_word(predict, vocabs):
     predict = predict[0]       
     predict /= np.sum(predict)
     sample = np.random.choice(np.arange(len(predict)), p=predict)
-    if sample > len(vocabs):
+    if sample >= len(vocabs):
         return vocabs[-1]
     else:
         return vocabs[sample]
@@ -47,7 +48,7 @@ def gen_poem(begin_word):
     input_data = tf.placeholder(tf.int32, [batch_size, None])
 
     end_points = rnn_model(model='lstm', input_data=input_data, output_data=None, vocab_size=len(
-        vocabularies), rnn_size=128, num_layers=2, batch_size=64, learning_rate=lr)
+        vocabularies), rnn_size=128, num_layers=1, batch_size=64, learning_rate=lr)
 
     saver = tf.train.Saver(tf.global_variables())
     init_op = tf.group(tf.global_variables_initializer(), tf.local_variables_initializer())
@@ -87,6 +88,14 @@ def pretty_print_poem(poem_):
 if __name__ == '__main__':
     begin_char = input('## （输入 quit 退出）请输入第一个字 please input the first character: ')
     if begin_char == 'quit':
-        exit() 
+        exit()
+    if not begin_char or len(begin_char) == 0:
+        print('## Empty input, using random start.')
+        begin_char = None
+    elif begin_char is not None:
+        _, word_int_map_check, _ = process_poems(corpus_file)
+        if begin_char not in word_int_map_check:
+            print('## Character "%s" not in vocabulary, using random start.' % begin_char)
+            begin_char = None
     poem = gen_poem(begin_char)
     pretty_print_poem(poem_=poem)
